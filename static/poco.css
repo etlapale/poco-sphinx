@@ -1,58 +1,12 @@
 /* http://paletton.com/#uid=c3v0B062m0kaVz84jP27qHbeJtFiHpX */
 
-@font-face
-{
-  font-family : "FiraSans";
-  src         : url("fonts/FiraSans-Regular.otf") format("opentype");
-  font-weight : normal;
-  font-style  : normal;
-}
-
-@font-face
-{
-  font-family : "FiraSans";
-  src         : url("fonts/FiraSans-Bold.otf") format("opentype");
-  font-weight : bold;
-  font-style  : normal;
-}
-
-@font-face
-{
-  font-family : "FiraSans";
-  src         : url("fonts/FiraSans-Heavy.otf") format("opentype");
-  font-weight : 900;
-  font-style  : normal;
-}
-
-@font-face
-{
-  font-family : "FiraMono";
-  src         : url("fonts/FiraMono-Regular.otf") format("opentype");
-  font-weight : normal;
-  font-style  : normal;
-}
-
-@font-face
-{
-  font-family : "FiraMono";
-  src         : url("fonts/FiraMono-Regular.otf") format("opentype");
-  font-weight : normal;
-  font-style  : normal;
-}
-
-@font-face
-{
-  font-family : "FiraMono";
-  src         : url("fonts/FiraMono-Bold.otf") format("opentype");
-  font-weight : bold;
-  font-style  : normal;
-}
+@import url("https://code.cdn.mozilla.net/fonts/fira.css");
 
 body
 {
   background   : rgb(238,238,236);
   color        : rgb(46,52,54);
-  font-family  : "FiraSans", "Fira Sans", sans-serif;
+  font-family  : "Fira Sans", sans-serif;
   font-size    : 13pt;
 }
 
@@ -402,12 +356,12 @@ pre
   border-left  : solid 0.5em rgb(233,226,211);
   padding-left : 1em;
 
-  font-family  : "FiraMono", "Fira Mono", monospace;
+  font-family  : "Fira Mono", monospace;
 }
 
 tt
 {
-  font-family  : "FiraMono", "Fira Mono", monospace;
+  font-family  : "Fira Mono", monospace;
 }
 
 /* Function descriptions */
@@ -496,7 +450,7 @@ a
 
 code
 {
-  font-family : "FiraMono", "Fira Mono", sans-serif;
+  font-family : "Fira Mono", sans-serif;
   font-size   : 13pt;
 }
 
