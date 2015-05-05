@@ -420,7 +420,7 @@ a[href$=".tar.xz"]:before {
 }
 
 
-a[href^="http://git.atelo.org/"]:before {
+a[href^="https://git.atelo.org/"]:before {
     font-family: FontAwesome;
     content: "\f1d3";
     margin-right: .25em;
