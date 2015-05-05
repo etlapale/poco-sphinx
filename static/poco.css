@@ -308,7 +308,7 @@ footer a[href]
 
 /* Syntax highlighting */
 
-.code .tag {
+.code .tag, .highlight .gp {
   color: #a08f7d;
 }
 
