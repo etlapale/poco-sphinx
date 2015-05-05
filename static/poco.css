@@ -308,15 +308,15 @@ footer a[href]
 
 /* Syntax highlighting */
 
-.code .tag, .highlight .gp {
+.code .tag, .highlight .gp, .highlight .nt {
   color: #a08f7d;
 }
 
-.code .attribute {
+.code .attribute, .highlight .na {
   color: #ce9d68;
 }
 
-.code .entity {
+.code .entity, .highlight .ni {
   color: #ce7668;
 }
 
