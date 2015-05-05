@@ -136,11 +136,13 @@ div#content
   z-index: 1;
 }
 
+
+/*
 #contact
 {
   color: #cf6656;
   background-color: #ffe9e6;
-  /*border-radius: .25em;*/
+
   padding-left: .1em;
   padding-right: .1em;
   padding-top: .1ex;
@@ -152,14 +154,15 @@ div#content
   font-size: 90%;
   z-index: 2;
   display: block;
-  /*transform: rotate(-45deg);*/
-}
 
+}*/
+
+/*
 #contact:hover
 {
   color: #ffa94c;
   background-color: #fff3e6;
-}
+}*/
 
 #navbar
 {
