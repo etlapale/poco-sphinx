@@ -413,7 +413,7 @@ a[href^="http://www.linkedin.com"]:before {
     margin-right: .25em;
 }
 
-a[href$="/data/"]:before {
+a[href$=".tar.xz"]:before {
     font-family: FontAwesome;
     content: "\f187";
     margin-right: .25em;
