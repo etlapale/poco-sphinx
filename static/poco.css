@@ -248,11 +248,16 @@ h1
   color: #b24f3f;
 }
 
-.article-meta
+.article-meta, .docutils.field-list
 {
   margin-top: -3.5ex;
   color: #9ca3a8;
   font-size: 80%;
+}
+
+.docutils.field-list th.field-name
+{
+    font-weight: normal;
 }
 
 h2
