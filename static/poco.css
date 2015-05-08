@@ -211,7 +211,7 @@ span.at:before
   content: "@";
 }
 
-.welcome p
+.welcome p, p.welcome
 {
   margin: 0;
 }
@@ -507,7 +507,7 @@ blockquote
 
 /* Small size display */
 
-.welcome img
+img.welcome
 {
   display: none;
 }
@@ -521,7 +521,7 @@ blockquote
 
 @media (min-width:840px)
 { 
-  .welcome img
+  img.welcome
   {
     margin-top: 3.5ex;
     width: 9.3em;
