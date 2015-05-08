@@ -27,10 +27,7 @@ div#content
   position: relative;
 }
 
-.welcome {
-}
-
-.welcome h1
+.welcome h1, h1.welcome
 {
   color: #cf6656;
   font-size: 220%;
