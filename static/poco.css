@@ -424,8 +424,7 @@ a[href$=".tar.xz"]:before {
     margin-right: .25em;
 }
 
-
-a[href^="https://git.atelo.org/"]:before {
+.content a[href^="https://git.atelo.org/"]:before {
     font-family: FontAwesome;
     content: "\f1d3";
     margin-right: .25em;
@@ -446,6 +445,24 @@ a[href^="https://git.atelo.org/"]:before {
 {
     background-color: #ffd8ad;
 }
+
+
+a.sphinx-source
+{
+    margin-left: .1em;
+    margin-right: .1em;
+}
+
+a.sphinx-source:before
+{
+    padding-right: .2em;
+}
+
+a.sphinx-source span
+{
+  display: none;
+}
+
 
 /* Old style */
 
