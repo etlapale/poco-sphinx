@@ -75,6 +75,26 @@ div#content
   display: none;
 }
 
+#bottombar
+{
+    list-style: none;
+}
+
+#bottombar li
+{
+    display: inline;
+}
+
+#bottombar li:first-child:before
+{
+    content: none;
+}
+
+#bottombar li:before
+{
+    content: " · ";
+}
+
 span.at:before
 {
   content: "@";
