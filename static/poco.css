@@ -171,19 +171,19 @@ footer a[href]
 
 /* Syntax highlighting */
 
-.code .tag, .highlight .gp, .highlight .nt {
+.code .tag, .highlight .gp, .highlight .nt, .highlight .ow {
   color: #a08f7d;
 }
 
-.code .attribute, .highlight .na {
+.code .attribute, .highlight .na, .highlight .nc {
   color: #ce9d68;
 }
 
-.code .entity, .highlight .ni {
+.code .entity, .highlight .ni, .highlight .cp {
   color: #ce7668;
 }
 
-.code .string, .highlight .s, .highlight .s2 {
+.code .string, .highlight .s, .highlight .s2, .highlight .nv {
   color: #7c94a4;
 }
 
