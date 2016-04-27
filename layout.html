@@ -19,7 +19,8 @@
 {%- macro submodule_of(name) %}
   {%- set info = {'repo': source_repository } %}
   {%- if other_repositories %}
-    {%- for prefix,url in other_repositories.iteritems() %}
+    {%- for prefix in other_repositories %}
+      {%- set url = other_repositories[prefix] %}
       {%- if name.startswith(prefix+'/') %}
 	{%-if info.update({'repo': url}) %}{%- endif %}
       {%- endif %}
@@ -32,7 +33,8 @@
 {# Search for the page source repository #}
 {%- set pageinfo = {'name': pagename, 'repo': source_repository} %}
 {%- if other_repositories %}
-  {%- for prefix,url in other_repositories.iteritems() %}
+  {%- for prefix in other_repositories %}
+    {%- set url = other_repositories[prefix] %}
     {%- if pagename.startswith(prefix+'/') %}
       {%-if pageinfo.update({'name': pagename|replace(prefix+'/',''), 'repo': url}) %}{%- endif %}
     {%- endif %}
