@@ -482,6 +482,15 @@ article div.abstract strong {
     margin-right: .6em;
 }
 
+article .figure {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+
+article .figure .caption {
+    text-align: left;
+}
+
 article div.bibliography {
     font-size: 90%;
 }
