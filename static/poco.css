@@ -449,14 +449,23 @@ img.welcome
   }
 }
 
+article h1
+{
+    margin-bottom: .6ex;
+}
+
 article h1 a.headerlink
 {
     display: none;
 }
 
+article .article-authors {
+    font-size: 100%;
+}
+
 article div.abstract {
-    margin-top: 2ex;
-    margin-bottom: 2.5ex;
+    margin-top: 2.8ex;
+    margin-bottom: 2.6ex;
     margin-left: 2em;
     margin-right: 2em;
     font-size: 90%;
