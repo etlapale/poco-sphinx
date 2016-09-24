@@ -448,3 +448,8 @@ img.welcome
     width        : 50em;
   }
 }
+
+article h1 a[class="headerlink"]
+{
+    display: none;
+}
