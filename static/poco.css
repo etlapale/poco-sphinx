@@ -477,6 +477,11 @@ article div.abstract .topic-title {
     color: #8a6b4a;
 }
 
+article div.abstract strong {
+    color: #8a6b4a;
+    margin-right: .6em;
+}
+
 article div.bibliography {
     font-size: 90%;
 }
