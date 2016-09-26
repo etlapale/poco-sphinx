@@ -3,7 +3,6 @@ console.log("document", document);
 
 
 function styleMetadata() {
-
     // Search the authors in the metadata
     var fieldList = document.querySelector('table.field-list');
     var fields = fieldList.querySelectorAll('table.field-list tr.field');
@@ -43,7 +42,32 @@ function styleMetadata() {
 }
 
 
-if (document.readyState!='loading')
+function styleCaptions() {
+    // Search all captions
+    var captions = document.querySelectorAll('.figure .caption-text');
+    for (var caption of captions) {
+	console.log('-', caption);
+	var first = caption.childNodes[0];
+	var res = first.data.match(/Figure (\d+):/);
+	// Reformat them with class caption label
+	if (res) {
+	    first.data = first.data.substr(res[0].length);
+	    var labelNode = document.createElement('strong');
+	    labelNode.className = 'caption-label';
+	    labelNode.appendChild(document.createTextNode('Figure ' + res[1]));
+	    first.parentNode.insertBefore(labelNode, first);
+	}
+    }
+}
+
+
+function initArticle() {
     styleMetadata();
+    styleCaptions();
+}
+
+
+if (document.readyState!='loading')
+    initArticle();
 else if (document.addEventListener)
-    document.addEventListener('DOMContentLoaded', styleMetadata);
+    document.addEventListener('DOMContentLoaded', initArticle);

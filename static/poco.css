@@ -491,6 +491,10 @@ article .figure .caption {
     text-align: left;
 }
 
+article .figure .caption .caption-label {
+    margin-right: .6em;
+}
+
 article div.bibliography {
     font-size: 90%;
 }
