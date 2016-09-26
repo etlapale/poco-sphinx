@@ -70,9 +70,70 @@ function styleCaptions() {
 }
 
 
+function setupFixedTitle() {
+
+    var normalTitle = document.querySelector('article h1');
+
+    // Create a fixed title bar
+    var fixedTitle = document.createElement('div');
+    fixedTitle.className = 'fixed-title';
+    var titleText = normalTitle.childNodes[0].data;
+    var iconSpan = document.createElement('i');
+    iconSpan.className = 'fa fa-file-text-o';
+    fixedTitle.appendChild(iconSpan);
+    fixedTitle.appendChild(document.createTextNode(' ' + titleText));
+    var authors = document.querySelector('article .article-authors');
+    var authorsSpan = document.createElement('span');
+    authorsSpan.className = 'fixed-authors';
+    authorsSpan.appendChild(document.createTextNode(authors.textContent));
+    fixedTitle.appendChild(authorsSpan);
+    
+    normalTitle.parentNode.appendChild(fixedTitle);
+
+    var fixedTitleVisible = false;
+
+    function showFixedTitle() {
+	fixedTitle.style.display = 'block';
+	fixedTitleVisible = true;
+    }
+
+    function hideFixedTitle() {
+	fixedTitle.style.display = 'none';
+	fixedTitleVisible = false;
+    }
+    
+    function refreshTitleBar() {
+	// Check if main title is visible
+	var rect = normalTitle.getBoundingClientRect();
+	var viewHeight = Math.max(document.documentElement.clientHeight,
+				  window.innerHeight);
+	var titleVisible = ! (rect.bottom < 0 || rect.top - viewHeight >= 0);
+
+	if (! fixedTitleVisible && ! titleVisible)
+	    showFixedTitle();
+	else if (fixedTitleVisible && titleVisible)
+	    hideFixedTitle();
+    }
+
+    var ticking = false;
+    var last_known_scroll_pos;
+    window.addEventListener('scroll', function(evt) {
+	last_known_scroll_pos = window.scrollY;
+	if (! ticking) {
+	    window.requestAnimationFrame(function() {
+		refreshTitleBar();
+		ticking = false;
+	    });
+	}
+	ticking = true;
+    });
+}
+
+
 function initArticle() {
     styleMetadata();
     styleCaptions();
+    setupFixedTitle();
 }
 
 

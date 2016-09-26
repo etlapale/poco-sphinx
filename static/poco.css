@@ -482,6 +482,28 @@ article div.abstract strong {
     margin-right: .6em;
 }
 
+article div.fixed-title {
+    color: #8a6b4a;
+    background: white;
+    border-bottom: 1px solid #8a6b4a;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    padding-top: .2ex;
+    padding-bottom: .2ex;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+article div.fixed-title .fixed-authors {
+    color: rgb(46,52,54);
+    font-weight: normal;
+    margin-left: 4em;
+}
+
 article .figure {
     margin-top: 2ex;
     margin-bottom: 3ex;
