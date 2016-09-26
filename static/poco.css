@@ -459,7 +459,7 @@ article h1 a.headerlink
     display: none;
 }
 
-article .article-authors {
+article .article-authors, article .article-date {
     font-size: 100%;
 }
 

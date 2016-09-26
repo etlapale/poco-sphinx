@@ -6,13 +6,15 @@ function styleMetadata() {
     // Search the authors in the metadata
     var fieldList = document.querySelector('table.field-list');
     var fields = fieldList.querySelectorAll('table.field-list tr.field');
-    var authors, keywords;
+    var authors, date, keywords;
     for (var field of fields) {
 	var fieldName = field.querySelector('th').textContent;
 	var fieldValue = field.querySelector('td').textContent;
 
 	if (fieldName == "Authors:")
 	    authors = fieldValue;
+	else if (fieldName == "Date:")
+	    date = fieldValue;
 	else if (fieldName == "Keywords:")
 	    keywords = fieldValue;
     }
@@ -26,6 +28,14 @@ function styleMetadata() {
     authorsDiv.className = 'article-authors';
     authorsDiv.appendChild(document.createTextNode(authors));
     fieldList.parentNode.insertBefore(authorsDiv, fieldList);
+
+    // Insert the date
+    if (date) {
+	var dateDiv = document.createElement('div');
+	dateDiv.className = 'article-date';
+	dateDiv.appendChild(document.createTextNode('Last modified on ' + date));
+	fieldList.parentNode.insertBefore(dateDiv, fieldList);
+    }
 
     // Insert the keywords in the abstract
     var abstr = document.querySelector("div.abstract");
@@ -46,7 +56,6 @@ function styleCaptions() {
     // Search all captions
     var captions = document.querySelectorAll('.figure .caption-text');
     for (var caption of captions) {
-	console.log('-', caption);
 	var first = caption.childNodes[0];
 	var res = first.data.match(/Figure (\d+):/);
 	// Reformat them with class caption label
