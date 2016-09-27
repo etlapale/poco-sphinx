@@ -76,7 +76,7 @@ function setupFixedTitle() {
 
     // Create a fixed title bar
     var fixedTitle = document.createElement('div');
-    fixedTitle.className = 'fixed-title';
+    fixedTitle.className = 'fixed-title fixed-hidden';
     var titleText = normalTitle.childNodes[0].data;
     var iconSpan = document.createElement('i');
     iconSpan.className = 'fa fa-file-text-o';
@@ -93,12 +93,14 @@ function setupFixedTitle() {
     var fixedTitleVisible = false;
 
     function showFixedTitle() {
-	fixedTitle.style.display = 'block';
+	//fixedTitle.style.display = 'block';
+	fixedTitle.className = 'fixed-title fixed-shown';
 	fixedTitleVisible = true;
     }
 
     function hideFixedTitle() {
-	fixedTitle.style.display = 'none';
+	//fixedTitle.style.display = 'none';
+	fixedTitle.className = 'fixed-title fixed-hidden';
 	fixedTitleVisible = false;
     }
     

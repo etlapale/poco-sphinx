@@ -482,16 +482,27 @@ article div.abstract strong {
     margin-right: .6em;
 }
 
-article div.fixed-title {
+article .fixed-title {
     color: #8a6b4a;
     background: white;
     border-bottom: 1px solid #8a6b4a;
+    font-size: 90%;
     font-weight: bold;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    display: none;
+    overflow: hidden;
+}
+
+article .fixed-hidden {
+    max-height: 0;
+    padding: 0;
+}
+
+article .fixed-shown {
+    max-height: 10ex;
+    transition: max-height 1s ease;
     padding-top: .2ex;
     padding-bottom: .2ex;
     padding-left: 4em;
