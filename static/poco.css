@@ -513,6 +513,21 @@ article div.fixed-title .fixed-authors {
     color: rgb(46,52,54);
     font-weight: normal;
     margin-left: 4em;
+    font-size: 90%;
+}
+
+article .fixed-close-button {
+    border: 1px solid #d8d8d8;
+    border-radius: .2em;
+    padding: .1em;
+    color: #d8d8d8;;
+    cursor: pointer;
+    right: 1em;
+    margin-left: 6em;
+}
+
+article .fixed-close-button:hover {
+    color: #8a6b4a;
 }
 
 article .figure {
