@@ -186,7 +186,7 @@
   {%- block navbar %}
     <ul id="navbar">
       {# Custom navigation bar #}
-      {%- if navbar_elements %}
+      {%- if navbar_elements is defined %}
 	{%- for (page,name,icon) in navbar_elements %}
 	  <li>
 	    <a class="fa {{icon}}" href="{{ pathto(page) }}" title="{{name}}"><span>{{name}}</span></a>
